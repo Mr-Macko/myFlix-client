@@ -1,5 +1,5 @@
 import React from "react";
-import { MovieView } from '../movie-view/movie.view';
+import { MovieView } from '../movie-view/movie-view';
 
 export class MainView extends React.Component {
 
