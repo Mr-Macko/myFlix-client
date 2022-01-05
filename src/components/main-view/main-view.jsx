@@ -13,7 +13,7 @@ export class MainView extends React.Component {
         { _id: 3, Title: 'Gladiator', Description: 'desc3...', ImagePath: '...'}
       ],
       selectedMovies: null
-    }
+    };
   }
 
     render() {
