@@ -22753,19 +22753,19 @@ class MainView extends _reactDefault.default.Component {
                 {
                     _id: 1,
                     Title: 'Inception',
-                    Description: 'desc1...',
+                    Description: 'A thief steals corporate secrets using shared dreaming technology. Then he gets an order to fix an idea in the head of a CEO.',
                     ImagePath: '...'
                 },
                 {
                     _id: 2,
-                    Title: 'The Shawshank Redemption',
-                    Description: 'desc2...',
+                    Title: 'The Dark Knight',
+                    Description: 'When the nasty Joker brings havoc and chaos to the people of Gotham, the "Dark Knight" must undergo one of the toughest psychological tests of his ability to fight injustice.',
                     ImagePath: '...'
                 },
                 {
                     _id: 3,
-                    Title: 'Gladiator',
-                    Description: 'desc3...',
+                    Title: 'In Bruges',
+                    Description: 'After a failed mission, guilt-ridden hitman Ray and his partner await instructions from their ruthless boss in Bruges, the last place in the world Ray wants to be.',
                     ImagePath: '...'
                 }
             ],
@@ -22783,7 +22783,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 29
+                lineNumber: 38
             },
             __self: this,
             children: "The list is empty!"
@@ -22792,7 +22792,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 32
+                lineNumber: 41
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
@@ -22802,7 +22802,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 34
+                    lineNumber: 43
                 },
                 __self: this
             }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -22812,7 +22812,7 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 36
+                        lineNumber: 45
                     },
                     __self: this
                 }, movie._id)

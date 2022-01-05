@@ -8,9 +8,18 @@ export class MainView extends React.Component {
     super();
     this.state = {
       movies: [
-        { _id: 1, Title: 'Inception', Description: 'desc1...', ImagePath: '...'},
-        { _id: 2, Title: 'The Shawshank Redemption', Description: 'desc2...', ImagePath: '...'},
-        { _id: 3, Title: 'Gladiator', Description: 'desc3...', ImagePath: '...'}
+        { _id: 1, 
+          Title: 'Inception', 
+          Description: 'A thief steals corporate secrets using shared dreaming technology. Then he gets an order to fix an idea in the head of a CEO.', 
+          ImagePath: '...'},
+        { _id: 2, 
+          Title: 'The Dark Knight', 
+          Description: 'When the nasty Joker brings havoc and chaos to the people of Gotham, the "Dark Knight" must undergo one of the toughest psychological tests of his ability to fight injustice.', 
+          ImagePath: '...'},
+        { _id: 3, 
+          Title: 'In Bruges', 
+          Description: 'After a failed mission, guilt-ridden hitman Ray and his partner await instructions from their ruthless boss in Bruges, the last place in the world Ray wants to be.', 
+          ImagePath: '...'}
       ],
       selectedMovies: null
     };
