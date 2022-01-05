@@ -22745,36 +22745,39 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _movieCard = require("../movie-card/movie-card");
 var _movieView = require("../movie-view/movie-view");
+let imgPath = '../img/';
+// temporary movie database
+let movies = [
+    {
+        _id: 1,
+        Title: 'Inception',
+        Description: 'A thief steals corporate secrets using shared dreaming technology. Then he gets an order to fix an idea in the head of a CEO.',
+        ImagePath: imgPath + 'inception.jpg',
+        Genre: 'Action',
+        Director: 'Christopher Nolan'
+    },
+    {
+        _id: 2,
+        Title: 'The Dark Knight',
+        Description: 'When the nasty Joker brings havoc and chaos to the people of Gotham, the "Dark Knight" must undergo one of the toughest psychological tests of his ability to fight injustice.',
+        ImagePath: '...',
+        Genre: 'Action',
+        Director: 'Christopher Nolan'
+    },
+    {
+        _id: 3,
+        Title: 'In Bruges',
+        Description: 'After a failed mission, guilt-ridden hitman Ray and his partner await instructions from their ruthless boss in Bruges, the last place in the world Ray wants to be.',
+        ImagePath: '...',
+        Genre: 'Drama',
+        Director: 'Martin McDonagh'
+    }
+];
 class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
         this.state = {
-            movies: [
-                {
-                    _id: 1,
-                    Title: 'Inception',
-                    Description: 'A thief steals corporate secrets using shared dreaming technology. Then he gets an order to fix an idea in the head of a CEO.',
-                    ImagePath: '...',
-                    Genre: 'Action',
-                    Director: 'Christopher Nolan'
-                },
-                {
-                    _id: 2,
-                    Title: 'The Dark Knight',
-                    Description: 'When the nasty Joker brings havoc and chaos to the people of Gotham, the "Dark Knight" must undergo one of the toughest psychological tests of his ability to fight injustice.',
-                    ImagePath: '',
-                    Genre: 'Action',
-                    Director: 'Christopher Nolan'
-                },
-                {
-                    _id: 3,
-                    Title: 'In Bruges',
-                    Description: 'After a failed mission, guilt-ridden hitman Ray and his partner await instructions from their ruthless boss in Bruges, the last place in the world Ray wants to be.',
-                    ImagePath: '...',
-                    Genre: 'Drama',
-                    Director: 'Martin McDonagh'
-                }
-            ],
+            movies: movies,
             selectedMovies: null
         };
     }
@@ -22784,12 +22787,12 @@ class MainView extends _reactDefault.default.Component {
         });
     }
     render() {
-        const { movies , selectedMovie  } = this.state;
-        if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        const { movies: movies1 , selectedMovie  } = this.state;
+        if (movies1.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 47
+                lineNumber: 52
             },
             __self: this,
             children: "The list is empty!"
@@ -22798,7 +22801,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 50
+                lineNumber: 55
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
@@ -22808,17 +22811,17 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 52
+                    lineNumber: 57
                 },
                 __self: this
-            }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+            }) : movies1.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
                     movie: movie,
                     onMovieClick: (movie1)=>{
                         this.setSelectedMovie(movie1);
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 54
+                        lineNumber: 59
                     },
                     __self: this
                 }, movie._id)
