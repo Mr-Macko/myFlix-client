@@ -22992,6 +22992,9 @@ class MovieCard extends _reactDefault.default.Component {
         const { movie  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "movie-card",
+            onClick: ()=>{
+                this.state.selectedMovie = movie;
+            },
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
                 lineNumber: 6
