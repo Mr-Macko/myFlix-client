@@ -2,6 +2,8 @@ import React from "react";
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
+let imgPath = './img/';
+
 // temporary movie database
 let movies = [
   { _id: 1, 
@@ -14,14 +16,14 @@ let movies = [
   { _id: 2, 
     Title: 'The Dark Knight', 
     Description: 'When the nasty Joker brings havoc and chaos to the people of Gotham, the "Dark Knight" must undergo one of the toughest psychological tests of his ability to fight injustice.', 
-    ImagePath: '...',
+    ImagePath: imgPath + 'dark-knight.jpg',
     Genre: 'Action',
     Director: 'Christopher Nolan'
   },
   { _id: 3, 
     Title: 'In Bruges', 
     Description: 'After a failed mission, guilt-ridden hitman Ray and his partner await instructions from their ruthless boss in Bruges, the last place in the world Ray wants to be.', 
-    ImagePath: '...',
+    ImagePath: imgPath + 'in-bruges.jpg',
     Genre: 'Drama',
     Director: 'Martin McDonagh'
   }
