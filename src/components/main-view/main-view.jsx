@@ -36,9 +36,20 @@ export class MainView extends React.Component {
   constructor(){
     super();
     this.state = {
-      movies: movies,
+      movies: [],
       selectedMovies: null
     };
+  }
+
+  componentDidCatch(){
+    axios.get('https://max-movie-api.herokuapp.com/movies')
+    .then(response => {
+      this.setState({
+        movies: response.data
+      });
+    })
+    .catch(error => {console.log(error);
+    });
   }
 
     setSelectedMovie(newSelectedMovie) {
