@@ -1,4 +1,7 @@
 import React from 'react';
+
+let imgPath = './img/';
+
 import PropTypes from 'prop-types';
 
 export class MovieView extends React.Component {
@@ -21,7 +24,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={movie.ImagePath} />
+          <img src={imgPath + movie.ImagePath} />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
@@ -33,11 +36,11 @@ export class MovieView extends React.Component {
         </div>
         <div className="movie-genre">
           <span className="label">Genre: </span>
-          <span className="value">{movie.Genre}</span>
+          <span className="value">{movie.Genre.Name}</span>
         </div>
         <div className="movie-director">
           <span className="label">Director: </span>
-          <span className="value">{movie.Director}</span>
+          <span className="value">{movie.Director.Name}</span>
         </div>
         <button onClick={() => { onBackClick(null); }}>Back</button>
 
@@ -60,7 +63,7 @@ MovieView.propTypes = {
     Director: PropTypes.shape({
       Name: PropTypes.string.isRequired,
       Bio: PropTypes.string.isRequired,
-      BirthYear: PropTypes.number.isRequired,
+      BirthYear: PropTypes.number,
       DeathYear: PropTypes.number
     })
   }).isRequired,
