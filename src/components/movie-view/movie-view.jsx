@@ -4,6 +4,8 @@ let imgPath = './img/';
 
 import PropTypes from 'prop-types';
 
+import { Button } from 'react-bootstrap';
+
 export class MovieView extends React.Component {
 
   keypressCallback(event) {
@@ -42,7 +44,7 @@ export class MovieView extends React.Component {
           <span className="label">Director: </span>
           <span className="value">{movie.Director.Name}</span>
         </div>
-        <button onClick={() => { onBackClick(null); }}>Back</button>
+        <Button onClick={() => { onBackClick(null); }}>Back</Button>
 
       </div>
     );
