@@ -18,15 +18,15 @@ export function RegistrationView(props) {
       Email: email,
       Birthday: birthday
     })
-    .then(response => {
-      const data = response.data;
-      console.log(data)
-      window.open('/', '_self');
-    })
-    .catch(e => {
-      console.log('error registering the user')
-    });
-};
+      .then(response => {
+        const data = response.data;
+        console.log(data)
+        window.open('/', '_self');
+      })
+      .catch(e => {
+        console.log('error registering the user')
+      });
+  };
 
   return (
     <Container>
