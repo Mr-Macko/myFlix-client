@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { Container, Form, Button, FormGroup, FormControl } from 'react-bootstrap';
+
 export function RegistrationView(props) {
   const [username, setUsername] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [email, setEmail] = useState('');
+  const [birthday, setBirthday] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +16,7 @@ export function RegistrationView(props) {
       Username: username,
       Password: password,
       Email: email,
+      Birthday: birthday
     })
     .then(response => {
       const data = response.data;
@@ -25,48 +29,74 @@ export function RegistrationView(props) {
 };
 
   return (
-    <div>
-      <p>Sign up for a free account:</p>
-      <form>
-        <label>
-          Username: 
-          <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-          <span className="label-tips">5+ characters, no spaces</span>
-          <br/>
-        </label>
-        <label>
-          Enter desired password: 
-          <input type="text" value={password1} onChange={e => setPassword1(e.target.value)} />
-          <span className="label-tips">must not be blank</span>
-          <br/>
-        </label>
-        <label>
-          Re-enter password: <span className="label-tips">passwords must match</span>
-          <input type="text" value={password2} onChange={e => setPassword2(e.target.value)} />
-          <span className="label-tips">passwords must match</span>
-          <br/>
-        </label>
-        <label>
-          Email: 
-          <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-          <span className="label-tips">required</span>
-          <br/>
-        </label>
-        <label>
-          Birthday: 
-          <input type="text" value={birthday} onChange={e => setBirthday(e.target.value)} />
-          <span className="label-tips">optional</span>
-          <br/>
-        </label>
+    <Container>
+      <Form>
+        <Form.Group>
+        <Form.Label>Username:</Form.Label>
+          <Form.Control
+            type="text" 
+            value={username} 
+            onChange={e => setUsername(e.target.value)}
+            required
+            placeholder='Enter a username'
+            />
+        </Form.Group>
 
-        <button type="submit" onClick={handleSubmit}>Register</button>
-      </form>
-    </div>
+        <Form.Group>
+          <Form.Label>Password:</Form.Label>
+          <Form.Control 
+          type="text" 
+          value={password1} 
+          onChange={e => setPassword1(e.target.value)}
+          required
+          placeholder='Enter a password'
+          />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Re-enter password</Form.Label>
+          <Form.Control
+          type="text"
+          value={password2}
+          onChange={e => setPassword2(e.target.value)}
+          required
+          placeholder='Enter same password'
+          />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Email:</Form.Label>
+          <Form.Control
+          type="text"
+          value={email}
+          onChange={e => setEmail(e.target.value)} 
+          required
+          placeholder='Enter valid email-adress'
+          />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Birthday:</Form.Label>
+          <Form.Control
+          type="text"
+          value={birthday}
+          onChange={e => setBirthday(e.target.value)}
+          />
+        </Form.Group>
+
+        <Button type="submit" onClick={handleSubmit}>Register</Button>
+
+      </Form>
+    </Container>
+
   )
 }
 
 // prop-types
 // Give informational warnings in browser if data does not match required shape
+// LoginView.propTypes = {
+//   onLoggedIn: PropTypes.func.isRequired
+// }; 
 RegistrationView.propTypes = {
   register: PropTypes.shape({
     Username: PropTypes.string.isRequired,
