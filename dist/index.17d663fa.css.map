@@ -1,0 +1,1 @@
+{"mappings":"AAAA;EACI;;ACCJ;EACE,OAHM;;;AAMR;EACE","sources":["src/components/main-view/main-view.scss","src/index.scss"],"sourcesContent":[".Navbar {\n    background: #517664;\n}","$color: steelblue;\n\n.my-flix {\n  color: $color;\n}\n\nButton {\n  background: #9fd8cb;\n}"],"names":[],"version":3,"file":"index.17d663fa.css.map","sourceRoot":"/__parcel_source_root/"}

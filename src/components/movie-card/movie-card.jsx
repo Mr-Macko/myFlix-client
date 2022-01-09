@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// react bootstrap
+// react-bootstrap components
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 

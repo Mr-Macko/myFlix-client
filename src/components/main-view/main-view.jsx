@@ -1,12 +1,18 @@
 import React from "react";
 import axios from "axios";
 
+// SCSS Import
+import './main-view.scss'
+
+// react components
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+
+// react bootstrap
 
 export class MainView extends React.Component {
 
@@ -43,6 +49,19 @@ export class MainView extends React.Component {
   
       return (
         <div className="main-view">
+
+          <Navbar className='Navbar'>
+            <Container>
+              <NavbarBrand href='#home'>MyFlix</NavbarBrand>
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#link">Link</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+
           {selectedMovie
             ? (
               <Row className='justify-content-md-center'>
