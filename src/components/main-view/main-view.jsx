@@ -12,6 +12,7 @@ import { MovieView } from '../movie-view/movie-view';
 
 // react bootstrap
 import { Container, Navbar, NavbarBrand, Row, Nav, Col} from "react-bootstrap";
+import { Container, Navbar, NavbarBrand, Row, Nav, Col, Form, FormControl, Button} from "react-bootstrap";
 
 export class MainView extends React.Component {
 
@@ -49,15 +50,25 @@ export class MainView extends React.Component {
       return (
         <div className="main-view">
 
-          <Navbar className='Navbar'>
+          <Navbar expand='lg' className='Navbar'>
             <Container>
               <NavbarBrand href='#home'>MyFlix</NavbarBrand>
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Link</Nav.Link>
+                  <Nav.Link href="#profile">Profile</Nav.Link>
+                  <Nav.Link href="#logout">Logout</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
+              <Form className="d-flex">
+                  <FormControl
+                    type="search"
+                    placeholder="Search Movie"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                 <Button className='button'>Search</Button>
+                </Form>
             </Container>
           </Navbar>
 
