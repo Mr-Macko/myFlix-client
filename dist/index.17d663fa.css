@@ -1,6 +1,10 @@
 .Navbar {
   background: #517664;
 }
+
+Button {
+  background: #9fd8cb;
+}
 .my-flix {
   color: steelblue;
 }
