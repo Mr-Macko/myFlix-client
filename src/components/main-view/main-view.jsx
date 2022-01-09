@@ -11,7 +11,6 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
 // react bootstrap
-import { Container, Navbar, NavbarBrand, Row, Nav, Col} from "react-bootstrap";
 import { Container, Navbar, NavbarBrand, Row, Nav, Col, Form, FormControl, Button} from "react-bootstrap";
 
 export class MainView extends React.Component {
