@@ -32,64 +32,67 @@ export function RegistrationView(props) {
     <Container>
       <Row>
         <Col>
-          <Form>
-            <Form.Group>
-              <Form.Label>Username:</Form.Label>
-              <Form.Control
-                type="text"
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-                required
-                placeholder='Enter a username'
-              />
-            </Form.Group>
+          <CardGroup>
+            <Card>
+              <Card.Title>Registration</Card.Title>
+              <Form>
+                <Form.Group>
+                  <Form.Label>Username:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
+                    required
+                    placeholder='Enter a username'
+                  />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Password:</Form.Label>
-              <Form.Control
-                type="text"
-                value={password1}
-                onChange={e => setPassword1(e.target.value)}
-                required
-                placeholder='Enter a password'
-              />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Password:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={password1}
+                    onChange={e => setPassword1(e.target.value)}
+                    required
+                    placeholder='Enter a password'
+                  />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Re-enter password</Form.Label>
-              <Form.Control
-                type="text"
-                value={password2}
-                onChange={e => setPassword2(e.target.value)}
-                required
-                placeholder='Enter same password'
-              />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Re-enter password</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={password2}
+                    onChange={e => setPassword2(e.target.value)}
+                    required
+                    placeholder='Enter same password'
+                  />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Email:</Form.Label>
-              <Form.Control
-                type="text"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                required
-                placeholder='Enter valid email-adress'
-              />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Email:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                    placeholder='Enter valid email-adress'
+                  />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Birthday:</Form.Label>
-              <Form.Control
-                type="text"
-                value={birthday}
-                onChange={e => setBirthday(e.target.value)}
-              />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Birthday:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={birthday}
+                    onChange={e => setBirthday(e.target.value)}
+                  />
+                </Form.Group>
 
-            <Button type="submit" onClick={handleSubmit}>Register</Button>
-
-          </Form>
-
+                <Button type="submit" onClick={handleSubmit}>Register</Button>
+              </Form>
+            </Card>
+          </CardGroup>
         </Col>
       </Row>
     </Container>
