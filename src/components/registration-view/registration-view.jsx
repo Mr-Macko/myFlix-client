@@ -6,12 +6,23 @@ export function RegistrationView(props) {
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [email, setEmail] = useState('');
-  const [birthday, setBirthday] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.onRegister(true, username);
-  };
+    axios.post('https://max-movie-api.herokuapp.com/users', {
+      Username: username,
+      Password: password,
+      Email: email,
+    })
+    .then(response => {
+      const data = response.data;
+      console.log(data)
+      window.open('/', '_self');
+    })
+    .catch(e => {
+      console.log('error registering the user')
+    });
+};
 
   return (
     <div>
@@ -56,6 +67,11 @@ export function RegistrationView(props) {
 
 // prop-types
 // Give informational warnings in browser if data does not match required shape
-// LoginView.propTypes = {
-//   onLoggedIn: PropTypes.func.isRequired
-// }; 
+RegistrationView.propTypes = {
+  register: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthday: PropTypes.string.isRequired
+  })
+};
