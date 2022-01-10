@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Button } from 'react-bootstrap';
 
-let imgPath = './img/'
+let imgPath = './public/img/';
 
 export class MovieView extends React.Component {
 

@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let imgPath = './img/'
+let imgPath = './public/img/';
 
 //SCSS Import
 import './movie-card.scss'
 
 // react-bootstrap components
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Button, Card, CardImg } from 'react-bootstrap'; 
 
 export class MovieCard extends React.Component {
   render() {
