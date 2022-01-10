@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // react-bootstrap components
-import { Container, Form, Button, FormGroup, FormControl, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { Container, Form, Button, FormGroup, FormControl, Card, CardGroup, Col, Row, Navbar, NavbarBrand} from 'react-bootstrap';
 
 export function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -23,32 +23,42 @@ export function LoginView(props) {
 
   return (
     <Container>
+
+      <Navbar expand='lg' className='Navbar'>
+        <Container fluid>
+          <NavbarBrand href='#home'>MyFlix</NavbarBrand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        </Container>
+      </Navbar>
+
       <Row>
-        <col>
+        <Col>
           <CardGroup>
             <Card>
-              <Card.Title>Login</Card.Title>
-              <Form>
-                <Form.Group controlId="formUsername">
-                  <Form.Label>Username:</Form.Label>
-                  <Form.Control
-                    type="text"
-                    onChange={e => setUsername(e.target.value)} />
-                </Form.Group>
+              <Card.Body>
+                <Card.Title>Login</Card.Title>
+                <Form>
+                  <Form.Group controlId="formUsername">
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control
+                      type="text"
+                      onChange={e => setUsername(e.target.value)} />
+                  </Form.Group>
 
-                <Form.Group controlId="formPassword">
-                  <Form.Label>Password:</Form.Label>
-                  <Form.Control
-                    type="password"
-                    onChange={e => setPassword(e.target.value)} />
-                </Form.Group>
+                  <Form.Group controlId="formPassword">
+                    <Form.Label>Password:</Form.Label>
+                    <Form.Control
+                      type="password"
+                      onChange={e => setPassword(e.target.value)} />
+                  </Form.Group>
 
-                <Button className='button' type="submit" onClick={handleSubmit}>Submit</Button>
-                
-              </Form>
+                  <Button className='button' type="submit" onClick={handleSubmit}>Submit</Button>
+
+                </Form>
+              </Card.Body>
             </Card>
           </CardGroup>
-        </col>
+        </Col>
       </Row>
     </Container>
   );
