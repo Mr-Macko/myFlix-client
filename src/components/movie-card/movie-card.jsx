@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+let imgPath = './img/'
+
 //SCSS Import
 import './movie-card.scss'
 
@@ -14,7 +16,7 @@ export class MovieCard extends React.Component {
 
     return (
       <Card>
-        <Card.Img variant="top" src={movie.ImagePath} />
+        <Card.Img variant="top" src={imgPath + movie.ImagePath} crossOrigin="true" />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>

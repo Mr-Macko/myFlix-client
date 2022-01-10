@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import { Button } from 'react-bootstrap';
 
+let imgPath = './img/'
+
 export class MovieView extends React.Component {
 
   keypressCallback(event) {
@@ -24,7 +26,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={movie.ImagePath} />
+          <img src={imgPath + movie.ImagePath} crossOrigin="true" />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
