@@ -964,10 +964,10 @@ class MyFlixApplication extends _reactDefault.default.Component {
                 lineNumber: 20
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 23
+                    lineNumber: 21
                 },
                 __self: this
             })
@@ -37929,7 +37929,7 @@ function RegistrationView(props) {
                                                 onClick: handleSubmit,
                                                 __source: {
                                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                                    lineNumber: 99
+                                                    lineNumber: 100
                                                 },
                                                 __self: this,
                                                 children: "Register"
