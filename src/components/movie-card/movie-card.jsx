@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let imgPath = './img/'
-
 //SCSS Import
 import './movie-card.scss'
 
 // react-bootstrap components
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Button, Card, CardGroup, CardImg, Col, Row } from 'react-bootstrap';
 
 export class MovieCard extends React.Component {
   render() {
@@ -16,7 +13,7 @@ export class MovieCard extends React.Component {
 
     return (
       <Card>
-        <Card.Img variant="top" src={imgPath + movie.ImagePath} crossOrigin="true" />
+        <Card.Img variant="top" src={movie.ImagePath} crossOrigin="true" />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>
