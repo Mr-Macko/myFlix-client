@@ -1,10 +1,12 @@
+// React components
 import React from 'react';
-
 import PropTypes from 'prop-types';
 
-import { Button } from 'react-bootstrap';
+//SCSS Import
+import './movie-view.scss'
 
-let imgPath = './public/img/';
+// React-Bootstrap components
+import { Button } from 'react-bootstrap';
 
 export class MovieView extends React.Component {
 
@@ -26,7 +28,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={imgPath + movie.ImagePath} crossOrigin="true" />
+          <img className="movie-image" src={movie.ImagePath} crossOrigin="true" />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
