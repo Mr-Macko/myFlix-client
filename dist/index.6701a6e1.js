@@ -984,7 +984,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","./components/main-view/main-view":"2zHas","./components/movie-card/movie-card":"6EiBJ","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","react-bootstrap":"h2YVd","./components/registration-view/registration-view":"aP2YV","./components/login-view/login-view":"054li"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","./components/main-view/main-view":"2zHas","./components/movie-card/movie-card":"6EiBJ","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","./components/registration-view/registration-view":"aP2YV","./components/login-view/login-view":"054li","react-bootstrap":"h2YVd"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
@@ -22972,7 +22972,7 @@ class MainView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","axios":"iYoWk","../login-view/login-view":"054li","../registration-view/registration-view":"aP2YV","react-bootstrap":"h2YVd","./main-view.scss":"jyMAr"}],"ig5ZF":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","axios":"iYoWk","../login-view/login-view":"054li","../registration-view/registration-view":"aP2YV","./main-view.scss":"jyMAr","react-bootstrap":"h2YVd"}],"ig5ZF":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -23220,7 +23220,7 @@ MovieCard.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","prop-types":"1tgq3","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8","./movie-card.scss":"cF5gT"}],"1tgq3":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","prop-types":"1tgq3","./movie-card.scss":"cF5gT","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8"}],"1tgq3":[function(require,module,exports) {
 var ReactIs = require('react-is');
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -23914,7 +23914,7 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"lYuBM","./lib/has":"9e9z2"}],"9CzHT":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"lYuBM","./lib/has":"9e9z2"}],"cF5gT":[function() {},{}],"9CzHT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -24306,7 +24306,7 @@ const context = /*#__PURE__*/ _react.createContext(null);
 context.displayName = 'CardHeaderContext';
 exports.default = context;
 
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF"}],"cF5gT":[function() {},{}],"ikZdr":[function(require,module,exports) {
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF"}],"ikZdr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3741 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
