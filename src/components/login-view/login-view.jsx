@@ -37,7 +37,6 @@ export function LoginView(props) {
       <Navbar expand='lg' className='Navbar'>
         <Container fluid>
           <NavbarBrand href='#home'>MyFlix</NavbarBrand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         </Container>
       </Navbar>
 
