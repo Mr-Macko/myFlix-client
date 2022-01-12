@@ -23753,6 +23753,7 @@ class MovieView extends _reactDefault.default.Component {
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                        className: "movie-image",
                         src: movie.ImagePath,
                         crossOrigin: "true",
                         __source: {
