@@ -14,7 +14,7 @@ export function LoginView(props) {
     /* Send a request to the server for authentication */
     axios.post('https://max-movie-api.herokuapp.com/login', {
       Username: username,
-      Password: password
+      Password: password,
     })
     .then(response => {
       const data = response.data;
