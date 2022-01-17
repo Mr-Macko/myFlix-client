@@ -56,7 +56,7 @@ onLoggedIn(authData) {
 
 getMovies(token) {
   axios.get('https://max-movie-api.herokuapp.com/movies', {
-    headers: { Authorization: `Bearer ${token}`}
+    headers: { Authorization:`Bearer ${token}`}
   })
   .then(response => {
     // Assign the result to the state
