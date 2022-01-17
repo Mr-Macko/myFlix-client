@@ -964,10 +964,10 @@ class MyFlixApplication extends _reactDefault.default.Component {
                 lineNumber: 20
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 21
+                    lineNumber: 23
                 },
                 __self: this
             })

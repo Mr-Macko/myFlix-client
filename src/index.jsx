@@ -18,9 +18,9 @@ class MyFlixApplication extends React.Component {
   render() {
     return (
       <Container fluid>
-        <MainView />
+        {/* <MainView /> */}
         {/* <RegistrationView /> */}
-        {/* <LoginView /> */}
+        <LoginView />
       </Container>  
     );
   }
