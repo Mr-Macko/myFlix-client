@@ -22840,25 +22840,17 @@ class MainView extends _reactDefault.default.Component {
                 })
             })
         }));
-        if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-            className: "main-view",
-            __source: {
-                fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 81
-            },
-            __self: this
-        }));
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 84
+                lineNumber: 83
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                 className: "main-view justify-content-md-center",
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 85
+                    lineNumber: 84
                 },
                 __self: this,
                 children: [
@@ -22866,6 +22858,14 @@ class MainView extends _reactDefault.default.Component {
                         exact: true,
                         path: "/",
                         render: ()=>{
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                })
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
                             return movies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                                     md: 3,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -22876,7 +22876,24 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 86
+                            lineNumber: 85
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/register",
+                        render: ()=>{
+                            if (user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                to: "/"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 97
                         },
                         __self: this
                     }),
@@ -22893,7 +22910,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 93
+                            lineNumber: 103
                         },
                         __self: this
                     })
@@ -37286,6 +37303,7 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _movieViewScss = require("./movie-view.scss");
 // React-Bootstrap components
 var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
 class MovieView extends _reactDefault.default.Component {
     keypressCallback(event) {
         console.log(event.key);
@@ -37302,7 +37320,7 @@ class MovieView extends _reactDefault.default.Component {
             className: "movie-view",
             __source: {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 29
+                lineNumber: 31
             },
             __self: this,
             children: [
@@ -37310,7 +37328,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-poster",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 30
+                        lineNumber: 32
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
@@ -37319,7 +37337,7 @@ class MovieView extends _reactDefault.default.Component {
                         crossOrigin: "true",
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
-                            lineNumber: 31
+                            lineNumber: 33
                         },
                         __self: this
                     })
@@ -37328,7 +37346,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-title",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 33
+                        lineNumber: 35
                     },
                     __self: this,
                     children: [
@@ -37336,7 +37354,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 34
+                                lineNumber: 36
                             },
                             __self: this,
                             children: "Title: "
@@ -37345,7 +37363,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 35
+                                lineNumber: 37
                             },
                             __self: this,
                             children: movie.Title
@@ -37356,7 +37374,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-description",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 37
+                        lineNumber: 39
                     },
                     __self: this,
                     children: [
@@ -37364,7 +37382,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 38
+                                lineNumber: 40
                             },
                             __self: this,
                             children: "Description: "
@@ -37373,7 +37391,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 39
+                                lineNumber: 41
                             },
                             __self: this,
                             children: movie.Description
@@ -37384,7 +37402,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-genre",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 41
+                        lineNumber: 43
                     },
                     __self: this,
                     children: [
@@ -37392,7 +37410,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 42
+                                lineNumber: 44
                             },
                             __self: this,
                             children: "Genre: "
@@ -37401,10 +37419,27 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 43
+                                lineNumber: 45
                             },
                             __self: this,
                             children: movie.Genre.Name
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                            to: `/genres/${movie.Genre.Name}`,
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 46
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                variant: "link",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 47
+                                },
+                                __self: this,
+                                children: "Genre"
+                            })
                         })
                     ]
                 }),
@@ -37412,7 +37447,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-director",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 45
+                        lineNumber: 50
                     },
                     __self: this,
                     children: [
@@ -37420,7 +37455,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 46
+                                lineNumber: 51
                             },
                             __self: this,
                             children: "Director: "
@@ -37429,10 +37464,27 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 47
+                                lineNumber: 52
                             },
                             __self: this,
                             children: movie.Director.Name
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                            to: `/directors/${movie.Director.Name}`,
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 53
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                variant: "link",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 54
+                                },
+                                __self: this,
+                                children: "Director"
+                            })
                         })
                     ]
                 }),
@@ -37443,7 +37495,7 @@ class MovieView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 49
+                        lineNumber: 57
                     },
                     __self: this,
                     children: "Back"
@@ -37478,7 +37530,7 @@ MovieView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","prop-types":"1tgq3","./movie-view.scss":"kvL93","react-bootstrap":"h2YVd"}],"kvL93":[function() {},{}],"iYoWk":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","prop-types":"1tgq3","./movie-view.scss":"kvL93","react-bootstrap":"h2YVd","react-router-dom":"kjA5T"}],"kvL93":[function() {},{}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
