@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; 
 
 //SCSS Import
 import './movie-card.scss'
 
 // react-bootstrap components
 import { Button, Card, CardGroup, CardImg, Col, Row } from 'react-bootstrap';
+
+import { Link } from 'react-router-dom';
 
 export class MovieCard extends React.Component {
   render() {
