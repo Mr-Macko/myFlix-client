@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
 // SCSS Import
 import './main-view.scss'
 
