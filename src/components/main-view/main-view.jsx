@@ -21,8 +21,24 @@ export class MainView extends React.Component {
     super();
     this.state = {
       movies: [],
+      user: null,
       selectedMovies: null
     };
+  }
+
+  getMovies(token) {
+    axios.get('https://max-movie-api.herokuapp.com/movies', {
+      headers: { Authorization:`Bearer ${token}`}
+    })
+    .then(response => {
+      // Assign the result to the state
+      this.setState({
+        movies: response.data
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   componentDidMount(){
@@ -37,39 +53,22 @@ export class MainView extends React.Component {
       });
   }
 
-    setSelectedMovie(newSelectedMovie) {
-      this.setState({
-        selectedMovie: newSelectedMovie
-      });
-    }
-
-
-onLoggedIn(authData) {
-  console.log(authData);
-  this.setState({
-    user: authData.user.Username
-  });
-
-  localStorage.setItem('token', authData.token);
-  localStorage.setItem('user', authData.user.Username);
-  this.getMovies(authData.token);
-}
-
-
-getMovies(token) {
-  axios.get('https://max-movie-api.herokuapp.com/movies', {
-    headers: { Authorization:`Bearer ${token}`}
-  })
-  .then(response => {
-    // Assign the result to the state
+  onLoggedIn(authData) {
+    console.log(authData);
     this.setState({
-      movies: response.data
+      user: authData.user.Username
     });
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-}
+  
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
+  }
+    // NOT NEEDED ANYMORE
+    // setSelectedMovie(newSelectedMovie) {
+    //   this.setState({
+    //     selectedMovie: newSelectedMovie
+    //   });
+    // }
 
     render() {
       const { movies, user } = this.state;
