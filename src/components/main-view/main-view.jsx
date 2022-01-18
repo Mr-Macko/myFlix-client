@@ -7,10 +7,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './main-view.scss'
 
 // react components
-import { LoginView } from '../login-view/login-view';
-import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { LoginView } from '../login-view/login-view';
+import { RegistrationView } from '../registration-view/registration-view';
 
 // react bootstrap
 import { Container, Navbar, NavbarBrand, Row, Nav, Col, Form, FormControl, Button} from "react-bootstrap";
@@ -100,8 +100,8 @@ export class MainView extends React.Component {
         </Router>
       );
     }
-    
-    // NOT NEEDED ANYMORE
+
+    // NOT NEEDED ANYMORE -> OLD RENDER METHOD
     // render() {
     //   const { movies, selectedMovie } = this.state;
   
