@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 // SCSS Import
@@ -94,6 +93,12 @@ export class MainView extends React.Component {
                   <MovieCard movie={m} />
                 </Col>
               ))
+            }} />
+            <Route path="/register" render={() => {
+              if (user) return <Redirect to="/" />
+              return <Col>
+                <RegistrationView />
+              </Col>
             }} />
             <Route path="/movies/:movieId" render={({ match }) => {
               return <Col md={8}>
