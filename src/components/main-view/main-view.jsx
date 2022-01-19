@@ -70,18 +70,25 @@ export class MainView extends React.Component {
     //   });
     // }
 
-    render() {
-      const { movies, user } = this.state;
-  
-      if (!user) return <Row>
-        <Col>
-          <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
-        </Col>
-      </Row>
-  
-      return (
-        <BrowserRouter>
-          <Row className="main-view justify-content-md-center">
+  // NOT NEEDED ANYMORE
+  // setSelectedMovie(newSelectedMovie) {
+  //   this.setState({
+  //     selectedMovie: newSelectedMovie
+  //   });
+  // }
+
+  render() {
+    const { movies, user } = this.state;
+
+    // if (!user) return <Row>
+    //   <Col>
+    //     <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+    //   </Col>
+    // </Row>
+
+    return (
+      <BrowserRouter>
+        <Row className="main-view justify-content-md-center">
           <Routes>
             <Route exact path="/" render={() => {
               if (!user) return <Col>
