@@ -63,6 +63,14 @@ export class MainView extends React.Component {
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
   }
+
+  onLoggedOut() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.setState({
+      user: null
+    });
+  }
   // NOT NEEDED ANYMORE
   // setSelectedMovie(newSelectedMovie) {
   //   this.setState({
