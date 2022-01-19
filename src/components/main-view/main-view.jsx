@@ -26,20 +26,6 @@ export class MainView extends React.Component {
     };
   }
 
-  getMovies(token) {
-    axios.get('https://max-movie-api.herokuapp.com/movies', {
-      headers: { Authorization: `Bearer ${token}` }
-    })
-      .then(response => {
-        // Assign the result to the state
-        this.setState({
-          movies: response.data
-        });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
 
   componentDidMount() {
     axios.get('https://max-movie-api.herokuapp.com/movies')
@@ -70,6 +56,21 @@ export class MainView extends React.Component {
     this.setState({
       user: null
     });
+  }
+
+  getMovies(token) {
+    axios.get('https://max-movie-api.herokuapp.com/movies', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+      .then(response => {
+        // Assign the result to the state
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
   // NOT NEEDED ANYMORE
   // setSelectedMovie(newSelectedMovie) {
