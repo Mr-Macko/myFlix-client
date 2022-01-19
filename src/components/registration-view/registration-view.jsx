@@ -14,7 +14,7 @@ export function RegistrationView(props) {
     e.preventDefault();
 
     // form validation
-    if (username.length < 4) return setError('Must include a username that is longer than 4 characters');
+    if (username.length < 5) return setError('Must include a username that is longer than 5 characters');
     if (password.length < 6) return setError('Must include a password that is longer than 6 characters');
     var alphaNum = /^[0-9a-zA-Z]+$/;
     if (!username.match(alphaNum)) return setError('Username must contain only letters and numbers');
