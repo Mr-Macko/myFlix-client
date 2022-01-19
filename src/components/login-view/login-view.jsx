@@ -11,6 +11,11 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // form validation
+    if (username.length < 5) return setError('Must include a username that is longer than 5 characters');
+    if (password.length < 6) return setError('Must include a password that is longer than 6 characters');
+
     /* Send a request to the server for authentication */
     axios.post('https://max-movie-api.herokuapp.com/login', {
       Username: username,
