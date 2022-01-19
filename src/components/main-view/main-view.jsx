@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Router, Routes, Route, Redirect } from "react-router-dom";
 
 // SCSS Import
 import './main-view.scss'
@@ -80,8 +80,9 @@ export class MainView extends React.Component {
       </Row>
   
       return (
-        <Router>
+        <BrowserRouter>
           <Row className="main-view justify-content-md-center">
+          <Routes>
             <Route exact path="/" render={() => {
               if (!user) return <Col>
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -105,8 +106,9 @@ export class MainView extends React.Component {
                 <MovieView movie={movies.find(m => m._id === match.params.movieId)} />
               </Col>
             }} />
+          </Routes>
           </Row>
-        </Router>
+        </BrowserRouter>
       );
     }
 
