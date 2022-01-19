@@ -1,6 +1,7 @@
 // React components
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 //SCSS Import
 import './movie-view.scss'
