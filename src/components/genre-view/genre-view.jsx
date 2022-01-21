@@ -18,9 +18,9 @@ export class GenreView extends React.Component {
                     <span className="value">{genre.Description}</span>
                 </div>
             </div>
-            <Link to={`/`}>
-                <Button>Return to Movies</Button>
-            </Link>
+            // <Link to={`/`}>
+            //     <Button>Return to Movies</Button>
+            // </Link>
         )
     }
 }

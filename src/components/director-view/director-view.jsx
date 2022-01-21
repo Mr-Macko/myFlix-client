@@ -22,9 +22,9 @@ export class DirectorView extends React.Component {
                     <span className="value">{director.Birth}</span>
                 </div>
             </div>
-            <Link to={`/`}>
-                <Button>Return to Movies</Button>
-            </Link>
+            // <Link to={`/`}>
+            //     <Button>Return to Movies</Button>
+            // </Link>
         )
     }
 }
