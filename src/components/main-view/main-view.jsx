@@ -57,6 +57,7 @@ export class MainView extends React.Component {
     this.setState({
       user: null
     });
+    window.open('/', '_self');
   }
 
   getMovies(token) {
