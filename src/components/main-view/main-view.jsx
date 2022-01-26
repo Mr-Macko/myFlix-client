@@ -92,7 +92,6 @@ export class MainView extends React.Component {
     return (
       <BrowserRouter>
         <Row className="main-view justify-content-md-center">
-          <Routes>
             <Route exact path="/" render={() => {
               if (!user) return <Col>
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -139,7 +138,6 @@ export class MainView extends React.Component {
               </Col>
             }
             } />
-          </Routes>
         </Row>
       </BrowserRouter>
     );
