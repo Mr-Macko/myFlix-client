@@ -37,13 +37,6 @@ export function RegistrationView(props) {
 
   return (
     <Container>
-
-      <Navbar expand='lg' className='Navbar'>
-        <Container fluid>
-          <NavbarBrand href='#home'>MyFlix</NavbarBrand>
-        </Container>
-      </Navbar>
-
       <Row>
         <Col>
           <CardGroup>
