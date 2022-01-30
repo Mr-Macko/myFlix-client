@@ -1,17 +1,26 @@
 import React from 'react';
 
-import { NavBar, Container, Button, Nav, Navbar, NavbarBrand, Form, FormControl } from 'react-bootstrap';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+import { NavBar, Container, Button, Nav, Navbar, NavbarBrand, Form, FormControl, NavbarCollapse, NavbarToggle } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 
-export function NavBar() {
-    const user = localStorage.getItem('user');
+export function NavBar({ user }) {
+    // const user = localStorage.getItem('user');
 
     onLoggedOut = () => {
         localStorage.clear();
         window.open('/', '_self');
+    };
+
+    const isAuth = () => {
+        if (typeof window == "undefined") {
+            return false;
+        }
+        if (localStorage.getItem("token")) {
+            return localStorage.getItem("token");
+        } else {
+            return false;
+        }
     };
 
     return (
@@ -22,15 +31,29 @@ export function NavBar() {
                         <img alt='MyFlix Logo' />
                     </NavbarBrand>
                 </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse>
                     <Nav>
-                        <Nav.Link href={'/users/${user}'}>My Profile</Nav.Link>
+                        {isAuth() && (
+                            <Nav.Link href={'/users/{user}'}>My Profile</Nav.Link>
+                        )}
                     </Nav>
                 </Navbar.Collapse>
-                <Button className="button" type="button" onClick={() => this.onLoggedOut()}>
-                    Logout
-                </Button>
+                {isAuth() && (
+                    <Button className="button" type="button" onClick={() => this.onLoggedOut()}>
+                        Logout
+                    </Button>
+                )}
+                {!isAuth() && (
+                    <Button className='button' href='/'>
+                        Login
+                    </Button>
+                )}
+                {!isAuth() && (
+                    <Button className='button' href='/register'>
+                        Register
+                    </Button>
+                )}
             </Container>
         </Navbar>
     )
