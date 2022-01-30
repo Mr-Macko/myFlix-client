@@ -1,15 +1,17 @@
-.Navbar {
-  background: #517664;
-}
 
-Button {
-  background: #9fd8cb;
+
+.movie-image {
+  height: 400px;
 }
 .my-flix {
   color: steelblue;
 }
 
-Button {
-  background: #9fd8cb;
+.button {
+  background: #517664 !important;
+}
+
+.Navbar {
+  background: #d6e5e3;
 }
 /*# sourceMappingURL=index.17d663fa.css.map */
