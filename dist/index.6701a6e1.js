@@ -957,10 +957,11 @@ var _indexScss = require("./index.scss");
 // Redux Components
 var _redux = require("redux");
 var _reactRedux = require("react-redux");
+var _reduxDevtoolsExtension = require("redux-devtools-extension");
 // Reducer Components
 var _reducers = require("./reducers/reducers");
 var _reducersDefault = parcelHelpers.interopDefault(_reducers);
-const store = _redux.createStore(_reducersDefault.default);
+const store = _redux.createStore(_reducersDefault.default, _reduxDevtoolsExtension.devToolsEnhancer());
 // Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
@@ -968,20 +969,20 @@ class MyFlixApplication extends _reactDefault.default.Component {
             store: store,
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 29
+                lineNumber: 30
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
                 fluid: true,
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 30
+                    lineNumber: 31
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
                     __source: {
                         fileName: "src/index.jsx",
-                        lineNumber: 31
+                        lineNumber: 32
                     },
                     __self: this
                 })
@@ -999,7 +1000,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","react-bootstrap":"h2YVd","./components/main-view/main-view":"2zHas","./index.scss":"jUTZ8","./components/movie-card/movie-card":"6EiBJ","./components/registration-view/registration-view":"aP2YV","./components/login-view/login-view":"054li","redux":"4d0QS","react-redux":"2L0if","./reducers/reducers":"btgQW"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5jF6T","react-bootstrap":"h2YVd","./components/main-view/main-view":"2zHas","./index.scss":"jUTZ8","./components/movie-card/movie-card":"6EiBJ","./components/registration-view/registration-view":"aP2YV","./components/login-view/login-view":"054li","redux":"4d0QS","react-redux":"2L0if","./reducers/reducers":"btgQW","redux-devtools-extension":"8GWVf"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
@@ -43134,6 +43135,21 @@ function setFilter(value) {
     };
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF"}]},["StzYI","8yywF","dLPEP"], "dLPEP", "parcelRequireaec4")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ig5ZF"}],"8GWVf":[function(require,module,exports) {
+'use strict';
+var compose = require('redux').compose;
+exports.__esModule = true;
+exports.composeWithDevTools = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : function() {
+    if (arguments.length === 0) return undefined;
+    if (typeof arguments[0] === 'object') return compose;
+    return compose.apply(null, arguments);
+};
+exports.devToolsEnhancer = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : function() {
+    return function(noop) {
+        return noop;
+    };
+};
+
+},{"redux":"4d0QS"}]},["StzYI","8yywF","dLPEP"], "dLPEP", "parcelRequireaec4")
 
 //# sourceMappingURL=index.6701a6e1.js.map
