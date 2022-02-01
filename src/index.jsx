@@ -13,6 +13,12 @@ import { Container } from 'react-bootstrap';
 // Import statement to indicate that you need to bundle `./index.scss`
 import './index.scss';
 
+// Redux Components
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+// Reducer Components
+import moviesApp from './reducers/reducers';
 
 const store = createStore(moviesApp)M
 
