@@ -2,14 +2,14 @@ import React from 'react';
 import axios from 'axios';
 
 // react-bootstrap components
-import { Navbar, Form, Button, Container, Row, Col, Form, Card } from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
+import { Navbar, Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
+// import Form from 'react-bootstrap/Form';
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Form from 'react-bootstrap/Form';
+// import Card from 'react-bootstrap/Card';
 
 
 export class ProfileView extends React.Component {
