@@ -16,11 +16,12 @@ import './index.scss';
 // Redux Components
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
 // Reducer Components
 import moviesApp from './reducers/reducers';
 
-const store = createStore(moviesApp)M
+const store = createStore(moviesApp, devToolsEnhancer());
 
 // Main component (will eventually use all the others)
 class MyFlixApplication extends React.Component {
