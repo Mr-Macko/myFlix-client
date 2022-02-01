@@ -40199,7 +40199,7 @@ function RegistrationView(props) {
                                                     children: "Birthday:"
                                                 }),
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
-                                                    type: "text",
+                                                    type: "date",
                                                     value: birthday,
                                                     onChange: (e)=>setBirthday(e.target.value)
                                                     ,
