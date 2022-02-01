@@ -13,15 +13,20 @@ import { Container } from 'react-bootstrap';
 // Import statement to indicate that you need to bundle `./index.scss`
 import './index.scss';
 
+
+const store = createStore(moviesApp)M
+
 // Main component (will eventually use all the others)
 class MyFlixApplication extends React.Component {
   render() {
     return (
-      <Container fluid>
-        <MainView />
-        {/* <RegistrationView /> */}
-        {/* <LoginView /> */}
-      </Container>  
+      <Provider store={store}>
+        <Container fluid>
+          <MainView />
+          {/* <RegistrationView /> */}
+          {/* <LoginView /> */}
+        </Container>
+      </Provider>
     );
   }
 }
