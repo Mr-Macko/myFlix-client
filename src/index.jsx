@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // React Components
-import { MainView } from './components/main-view/main-view';
-import { MovieCard } from './components/movie-card/movie-card';
-import { RegistrationView } from './components/registration-view/registration-view';
-import { LoginView } from './components/login-view/login-view';
+import  MainView  from './components/main-view/main-view';
+// import { MovieCard } from './components/movie-card/movie-card';
+// import { RegistrationView } from './components/registration-view/registration-view';
+// import { LoginView } from './components/login-view/login-view';
 
 // React-Bootstrap Components
 import { Container } from 'react-bootstrap';
