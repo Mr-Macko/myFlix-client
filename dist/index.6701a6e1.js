@@ -35429,7 +35429,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __self: this,
             children: [
-                /*#__PURE__*/ _jsxRuntime.jsx(_navbar.NavBar, {
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar, {
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 89
@@ -40896,14 +40896,14 @@ $parcel$ReactRefreshHelpers$1bb2.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "NavBar", ()=>NavBar
+parcelHelpers.export(exports, "Navbar", ()=>Navbar
 );
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
-function NavBar({ user  }) {
+function Navbar({ user  }) {
     // const user = localStorage.getItem('user');
     onLoggedOut = ()=>{
         localStorage.clear();
@@ -41018,9 +41018,9 @@ function NavBar({ user  }) {
         })
     }));
 }
-_c = _reactBootstrap.NavBar;
+_c = _reactBootstrap.Navbar;
 var _c;
-$RefreshReg$(_c, "NavBar");
+$RefreshReg$(_c, "Navbar");
 
   $parcel$ReactRefreshHelpers$1bb2.postlude(module);
 } finally {
