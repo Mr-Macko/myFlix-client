@@ -7,7 +7,7 @@ import { BrowserRouter, Router, Routes, Route, Redirect } from "react-router-dom
 
 import { setMovies } from "../../actions/actions";
 
-// import MoviesList from '../movies-list/movies-list';
+import MoviesList from '../movies-list/movies-list';
 
 // SCSS Import
 import './main-view.scss'
