@@ -40903,8 +40903,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
-function MyNavbar({ user  }) {
-    // const user = localStorage.getItem('user');
+function MyNavbar() {
+    const user = localStorage.getItem('user');
     onLoggedOut = ()=>{
         localStorage.clear();
         window.open('/', '_self');
