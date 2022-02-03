@@ -19,7 +19,7 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from "../genre-view/genre-view";
 import { ProfileView } from "../profile-view/profile-view";
-import { Navbar } from "../navbar/navbar";
+import { MyNavbar } from "../navbar/navbar";
 
 // react bootstrap
 import { Container, Navbar, NavbarBrand, Row, Nav, Col, Form, FormControl, Button } from "react-bootstrap";
@@ -86,7 +86,7 @@ class MainView extends React.Component {
 
     return (
       <BrowserRouter>
-        <Navbar />
+        <MyNavbar />
         {/* Route for MovieCard */}
         <Row className="main-view justify-content-md-center">
             <Route exact path="/" render={() => {

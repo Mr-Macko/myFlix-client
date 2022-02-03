@@ -4,7 +4,7 @@ import { NavBar, Container, Button, Nav, Navbar, NavbarBrand, Form, FormControl,
 
 import { Link } from 'react-router-dom';
 
-export function Navbar ({ user }) {
+export function MyNavbar ({ user }) {
     // const user = localStorage.getItem('user');
 
     onLoggedOut = () => {
