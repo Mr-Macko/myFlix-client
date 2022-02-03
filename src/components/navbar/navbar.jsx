@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export function MyNavbar() {
     const user = localStorage.getItem('user');
 
-    onLoggedOut = () => {
+    const onLoggedOut = () => {
         localStorage.clear();
         window.open('/', '_self');
     };
@@ -40,7 +40,7 @@ export function MyNavbar() {
                     </Nav>
                 </Navbar.Collapse>
                 {isAuth() && (
-                    <Button className="button" type="button" onClick={() => this.onLoggedOut()}>
+                    <Button className="button" type="button" onClick={() => onLoggedOut()}>
                         Logout
                     </Button>
                 )}

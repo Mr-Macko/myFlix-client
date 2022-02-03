@@ -40905,7 +40905,7 @@ var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 function MyNavbar() {
     const user = localStorage.getItem('user');
-    onLoggedOut = ()=>{
+    const onLoggedOut = ()=>{
         localStorage.clear();
         window.open('/', '_self');
     };
@@ -40985,7 +40985,7 @@ function MyNavbar() {
                 isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                     className: "button",
                     type: "button",
-                    onClick: ()=>this.onLoggedOut()
+                    onClick: ()=>onLoggedOut()
                     ,
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
