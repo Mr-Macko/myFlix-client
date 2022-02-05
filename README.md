@@ -21,9 +21,10 @@ The application is build on the service-side application (REST API and database)
 - HTML5, SCSS, JSX
 - React
 - React Bootstrap
-- React Router
+- React Router 
 - Redux
 - Axios
+- Parcel
 
 ## Installation
 Clone the repository, change directories, and use NPM to install the dependencies.
@@ -31,4 +32,11 @@ Clone the repository, change directories, and use NPM to install the dependencie
 $ git clone https://github.com/Mr-Macko/myFlix-client.git
 $ cd new-myFlix-client
 $ npm install
+```
+
+## How to run the app
+To run the app local, the build tool Parcel is required.
+
+```bash
+$ parcel src/index.html
 ```
