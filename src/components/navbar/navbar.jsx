@@ -35,7 +35,7 @@ export function MyNavbar() {
                 <Navbar.Collapse>
                     <Nav>
                         {isAuth() && (
-                            <Nav.Link href={'/users/{user}'}>My Profile</Nav.Link>
+                            <Nav.Link as={Link} to={'/users/${user}'}>My Profile</Nav.Link>
                         )}
                     </Nav>
                 </Navbar.Collapse>
@@ -50,7 +50,7 @@ export function MyNavbar() {
                     </Button>
                 )}
                 {!isAuth() && (
-                    <Button className='button' href='/register'>
+                    <Button className='button' as={Link} to={'/register'}>
                         Register
                     </Button>
                 )}

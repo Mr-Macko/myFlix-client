@@ -40972,7 +40972,8 @@ function MyNavbar() {
                         },
                         __self: this,
                         children: isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
-                            href: '/users/{user}',
+                            as: _reactRouterDom.Link,
+                            to: '/users/${user}',
                             __source: {
                                 fileName: "src/components/navbar/navbar.jsx",
                                 lineNumber: 38
@@ -41006,7 +41007,8 @@ function MyNavbar() {
                 }),
                 !isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                     className: "button",
-                    href: "/register",
+                    as: _reactRouterDom.Link,
+                    to: '/register',
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
                         lineNumber: 53
